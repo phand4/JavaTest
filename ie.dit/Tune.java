@@ -30,21 +30,22 @@ public class Tune implements Player
 	public String toString()
 	{
 		StringBuffer sb = new StringBuffer();
-		//int sx = this.getX;
-		sb.append(this.getX);
+		int sx = getX();
+		sb.append(sx);
 
-		//string  sT = this.getTitle;
-		sb.append(this.getTitle);
-		if(this.getAltTitle){
-			//string sAT = this.getAltTitle;
-			sb.append(this.getAltTitle);
+		String  sT = getTitle();
+		sb.append(sT);
+
+			String sAT = getAltTitle();
+		if(sAT == ""){
+			sb.append(sAT);
 		}
 
 		return sb.toString();
 	}
 
 	public void play(){
-		System.out.println(getNotation);
+		System.out.println(getNotation());
 	}
 
 }

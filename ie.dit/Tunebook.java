@@ -5,14 +5,29 @@ import java.io.IOException;
 import java.io.FileReader;
 import java.io.BufferedReader;
 
-public class TuneBook
-{
+public class TuneBook{
 
+	
 	ArrayList<String> tunes = new ArrayList<String>();
 
 	public TuneBook()
 	{
 		loadTuneBook();
+	}
+
+	public String toString()
+	{
+		StringBuffer sb = new StringBuffer();
+		for(String tune:tunes)
+		{
+			sb.append(tune + ", ");
+		}
+		return sb.toString();
+	}
+
+	public String findTune(String tune)
+	{
+		System.out.println(s.contains(tune));
 	}
 
 	public void loadTuneBook()
