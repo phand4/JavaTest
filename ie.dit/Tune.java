@@ -1,9 +1,15 @@
-public class Tune
+package ie.dit;
+
+interface Player{
+	public void play();
+}
+
+public class Tune implements Player
 {
 	private int x;
-	private string title;
-	private string altTitle;
-	private string notation;
+	private String title;
+	private String altTitle;
+	private String notation;
 
 	public int getX(){
 		return x;
@@ -20,4 +26,25 @@ public class Tune
 	public String getNotation(){
 		return notation;
 	}
+
+	public String toString()
+	{
+		StringBuffer sb = new StringBuffer();
+		//int sx = this.getX;
+		sb.append(this.getX);
+
+		//string  sT = this.getTitle;
+		sb.append(this.getTitle);
+		if(this.getAltTitle){
+			//string sAT = this.getAltTitle;
+			sb.append(this.getAltTitle);
+		}
+
+		return sb.toString();
+	}
+
+	public void play(){
+		System.out.println(getNotation);
+	}
+
 }
