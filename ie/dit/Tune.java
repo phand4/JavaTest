@@ -11,20 +11,23 @@ public class Tune implements Player
 	private String altTitle;
 	private String notation;
 
+//Needs to get data after X:, T:, T:, K:
+//So should retrieve substrings post the first two characters but
+//where it starts with relevant letter and colon
 	public int getX(){
-		return x;
+		return x.substring(2);
 	}
 
 	public String getTitle(){
-		return title;
+		return title.substring(2);;
 	}
 
 	public String getAltTitle(){
-		return altTitle;
+		return altTitle.substring(2);;
 	}
 
 	public String getNotation(){
-		return notation;
+		return notation.startsWith("K:");
 	}
 
 	public String toString()
